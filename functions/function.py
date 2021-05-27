@@ -89,3 +89,61 @@ def n(p):
 my_list = ['apple','banana','cherry']
 n(my_list)
 print(my_list)
+
+# n can use the reference to make modifications inside my_list. Here, f() has modified the first element. You can see that once the function returns, my_list has, in fact, been changed in the calling environment. 
+# The same concept applies to a dictionary:
+
+
+# Argument Passing Summary
+# Argument passing in Python can be summarized as follows. 
+# Passing an immutable object, like an int, str, tuple, or frozenset, 
+# to a Python function acts like pass-by-value. 
+# The function can’t modify the object in the calling environment.
+
+# Passing a mutable object such as a list, dict, or set acts 
+# somewhat—but not exactly—like 
+# pass-by-reference. The function can’t reassign the object wholesale, 
+# but it can change items in place 
+# within the object, and these changes will be reflected in the calling environment.
+
+
+def returnGrossary():
+    return 'milk','egg','bread'
+
+
+#multiple values can be return in python they will be returned as tuple
+
+one,two,three = returnGrossary() #returning tuple and unpacking typle
+print(one)
+
+#when no return value is given it returns None
+
+
+#################Variable number of args in python############
+#using argument tuple packing and unpacking using asterisk operator
+
+
+    # Any corresponding arguments in the function call are packed into a tuple 
+    #that the function can refer to by the given parameter nam
+def suming(*number): 
+     try:
+        print(number)
+        print(type(number))
+        return sum(number)
+     except TypeError:
+         print('Args must be of Type int',)
+         return 0
+
+
+print(suming(10,30,30,'s'))
+
+
+#passing tuple upacked
+
+def print_top_three(one,two,three):
+    print(f'one {one} two {two} three {three}')
+
+
+# list = ('Mahesh','Ramesh','Suresh') #tuple upcaking can be called with any iterable
+list = ['a','b','c']
+print_top_three(*list)
