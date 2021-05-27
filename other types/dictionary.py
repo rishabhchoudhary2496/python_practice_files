@@ -37,12 +37,13 @@ print(superHeroes)
 
 
 #creating dictonay from two list
-keys = [1,2,3,3]
+keys = [1,2,3,]
 values = ['apple','bananna','cherry',]
 #zip method
-print(dict(zip(keys,values)))
+print(dict(zip(keys,values))) #not throws error if two list are not of same length 
 
-res = {keys[i]: values[i] for i in range(len(keys))}
+#will throw error if two list are not samelength
+# res = {keys[i]: values[i] for i in range(len(keys))}
   
-# Printing resultant dictionary 
-print ("Resultant dictionary is : " +  str(res))
+# # Printing resultant dictionary 
+# print ("Resultant dictionary is : " +  str(res))
