@@ -32,3 +32,16 @@ from functools import reduce
 data = [2,4,5,6,7,8]
 
 print(reduce(lambda x,y: x*y,data))
+
+
+
+#enumerate function returns count and value  useful when need to use index
+list = ['s','p','e','a','k']
+
+#join string method str.join(iterable)
+word = ''.join(list)
+print(word)
+
+
+for count,value in enumerate(list):
+    print(count,value)
