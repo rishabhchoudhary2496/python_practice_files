@@ -1,4 +1,4 @@
-#multiple inheritance example
+#MultiLevel inheritance example
 
 class Animal:
     def __init__(self,height,weight,color) -> None:
@@ -19,9 +19,9 @@ class Animal:
 
 
 
-class Mammal:
-    def __init__(self):
-        pass
+class Mammal(Animal):
+    def __init__(self,height, weight, color):
+        super().__init__(height, weight, color)
 
     def give_birth(self):
         print('Give Birth')
@@ -30,18 +30,19 @@ class Mammal:
         print('mammal walks')
 
 
-class Wolf(Animal,Mammal):
+class Wolf(Mammal):
     jaw_bite = 1200
     def __init__(self, height, weight, color, isAlpha):
         super().__init__(height, weight, color)
         self.isAlpha = isAlpha
 
-
     def hunt(self):
         print('Wolf Ready to hunt')
 
+    def walk(self):
+        print('wolf walks with pride')
 
-mammal = Mammal()
-mammal.give_birth()
+
 wolf = Wolf(100,300,'red',True)
 wolf.walk()
+wolf.give_birth()
