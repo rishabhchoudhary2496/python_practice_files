@@ -5,7 +5,5 @@
 # # print(file.tell()) #reset position of handler
 # print(file.readline())
 # file.close()
-
-
 with open ('info.txt') as file:
     print(file.read(2))
