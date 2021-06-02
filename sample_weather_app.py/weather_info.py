@@ -36,7 +36,7 @@ class Weather():
 
     @staticmethod
     def make_report(weather_info):
-        return f"Today will be {weather_info['description']} and humidity will be {weather_info['humidity']} wind will be blowing at the speed of {weather_info['wind']['speed']} km per hour"
+        return f"it's a {weather_info['description']} and humidity is {weather_info['humidity']} wind is blowing at the speed of {weather_info['wind']['speed']} km per hour"
 
     def get_weather(self):
         try:
