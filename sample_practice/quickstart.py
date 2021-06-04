@@ -29,6 +29,8 @@ session.set_skip_users(skip_private=False)
 # session.set_do_comment(enabled=True, percentage=25)
 # session.like_by_feed(amount=100, randomize=True, unfollow=True, interact=True)
 
+session.like_by_tags(['nature', 'world'], amount=10)
+
 
 # session.set_do_like(True, percentage=70)
 # session.interact_by_users(accounts,amount=10,randomize=True,media='Photo')
